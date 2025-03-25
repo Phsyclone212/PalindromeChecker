@@ -6,6 +6,7 @@ public class PalindromeChecker {
 
         System.out.print("Enter your potential palindrome: ");
         String input = sc.nextLine();
+        String original = input;
         input = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
 
         int x = input.length()-1; //index tracker to grab chars in reverse
@@ -15,6 +16,6 @@ public class PalindromeChecker {
             x--;
         }
         String other = sb.toString();
-        System.out.println("Is a palindrome: "+input.equals(other)); //true or false
+        System.out.println("'"+original+"' is a palindrome: "+input.equals(other)); //true or false
     }
 }
